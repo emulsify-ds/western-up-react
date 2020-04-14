@@ -1,0 +1,21 @@
+{
+  "name": "western-up-react",
+  "version": "0.0.1",
+  "description": "React components for a fictitious University install",
+  "dependencies": {
+    "cross-env": "5.0.5",
+    "eslint-config-prettier": "^6.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emulsify-ds/western-up-react.git"
+  },
+  "author": "Brian Lewis",
+  "bugs": {
+    "url": "https://github.com/emulsify-ds/western-up-react/issues"
+  },
+  "homepage": "https://github.com/emulsify-ds/western-up-react#readme"
+}
