@@ -1,7 +1,4 @@
 import React from 'react';
-
-// import Colors from './colors';
-
 import grayscale from './colors-grayscale.js';
 import branding from './colors-branding.js';
 
@@ -9,8 +6,6 @@ import branding from './colors-branding.js';
  * Storybook Definition.
  */
 export default { title: 'Base/Colors' };
-
-// export const grayScale = () => <Colors>React Button</Colors>;
 
 const grayscaleItems = grayscale.map((item) => (
   <li className="sg-colors__list" key={item}>
@@ -20,6 +15,7 @@ const grayscaleItems = grayscale.map((item) => (
     </div>
   </li>
 ));
+
 const brandingItems = branding.map((item) => (
   <li className="sg-colors__list" key={item}>
     <div className={`sg-colors__color sg-colors__color--${item}`}></div>

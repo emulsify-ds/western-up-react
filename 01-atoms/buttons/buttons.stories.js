@@ -11,11 +11,11 @@ export const All = () => (
   <>
     <Button>Button Default</Button>
     <br />
-    <Button modifier="alt">Button Alt</Button>
+    <Button modifiers={['alt']}>Button Alt</Button>
     <br />
-    <Button modifier="alt-2">Button Alt 2</Button>
+    <Button modifiers={['alt-2']}>Button Alt 2</Button>
   </>
 );
 export const Default = () => <Button>Button Default</Button>;
-export const Alt = () => <Button modifier="alt">Button Alt</Button>;
-export const Alt2 = () => <Button modifier="alt-2">Button Alt 2</Button>;
+export const Alt = () => <Button modifiers={['alt']}>Button Alt</Button>;
+export const Alt2 = () => <Button modifiers={['alt-2']}>Button Alt 2</Button>;

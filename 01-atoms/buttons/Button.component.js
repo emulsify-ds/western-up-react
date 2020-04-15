@@ -10,12 +10,17 @@ import PropTypes from 'prop-types';
  * Component that renders a button with a click handler.
  */
 const Button = (props) => {
-  const { onClick, children, modifier } = props;
+  const { onClick, children, modifiers } = props;
 
+  let classNames = 'button';
+
+  if (modifiers) {
+    classNames += modifiers.map((modifier) => ' button--' + modifier);
+  }
   return (
     <button
       type="button"
-      className={`button ${modifier ? 'button--' + modifier : ''}`}
+      className={classNames}
       aria-label="button"
       onClick={onClick}
     >
