@@ -9,11 +9,15 @@ export default { title: 'Atoms/Button' };
 
 export const All = () => (
   <>
-    <Button>Button Default</Button>
-    <br />
-    <Button modifiers={['alt']}>Button Alt</Button>
-    <br />
-    <Button modifiers={['alt-2']}>Button Alt 2</Button>
+    <p>
+      <Default />
+    </p>
+    <p>
+      <Alt />
+    </p>
+    <p>
+      <Alt2 />
+    </p>
   </>
 );
 export const Default = () => <Button>Button Default</Button>;

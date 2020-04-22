@@ -5,22 +5,16 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import withModifiers from '../../_utils/withModifiers';
 
 /**
  * Component that renders a button with a click handler.
  */
-const Button = (props) => {
-  const { onClick, children, modifiers } = props;
-
-  let classNames = 'button';
-
-  if (modifiers) {
-    classNames += modifiers.map((modifier) => ' button--' + modifier);
-  }
+const Button = ({ onClick, children, modifiers }) => {
   return (
     <button
       type="button"
-      className={classNames}
+      className={withModifiers('button')(modifiers)}
       aria-label="button"
       onClick={onClick}
     >
@@ -32,6 +26,7 @@ const Button = (props) => {
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
+  modifiers: PropTypes.arrayOf(PropTypes.string),
 };
 
 Button.defaultProps = {

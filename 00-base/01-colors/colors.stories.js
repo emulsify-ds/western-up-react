@@ -7,23 +7,18 @@ import branding from './colors-branding.js';
  */
 export default { title: 'Base/Colors' };
 
-const grayscaleItems = grayscale.map((item) => (
-  <li className="sg-colors__list" key={item}>
-    <div className={`sg-colors__color sg-colors__color--${item}`}></div>
-    <div className="sg-info">
-      <code>{item}</code>
-    </div>
-  </li>
-));
+const Colors = ({ palette }) => (
+  <ul className="sg-colors">
+    {palette.map((color) => (
+      <li className="sg-colors__list" key={color}>
+        <div className={`sg-colors__color sg-colors__color--${color}`}></div>
+        <div className="sg-info">
+          <code>{color}</code>
+        </div>
+      </li>
+    ))}
+  </ul>
+);
 
-const brandingItems = branding.map((item) => (
-  <li className="sg-colors__list" key={item}>
-    <div className={`sg-colors__color sg-colors__color--${item}`}></div>
-    <div className="sg-info">
-      <code>{item}</code>
-    </div>
-  </li>
-));
-
-export const Grayscale = () => <ul className="sg-colors">{grayscaleItems}</ul>;
-export const Branding = () => <ul className="sg-colors">{brandingItems}</ul>;
+export const Grayscale = () => <Colors palette={grayscale} />;
+export const Branding = () => <Colors palette={branding} />;

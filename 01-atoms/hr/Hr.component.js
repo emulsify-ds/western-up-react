@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Hr = () => {
-  return <hr class="divider" />;
-};
+const Hr = () => <hr className="divider" />;
 
 export default Hr;
