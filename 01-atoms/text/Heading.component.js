@@ -2,9 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withModifiers from '../../_utils/withModifiers';
 
-const Heading = ({ children, modifiers, level = '1' }) => {
+const Heading = ({
+  base_class = 'heading',
+  children,
+  modifiers,
+  level = '1',
+}) => {
   const Tag = `h${level}`;
-  return <Tag className={withModifiers('heading')(modifiers)}>{children}</Tag>;
+  return <Tag className={withModifiers(base_class)(modifiers)}>{children}</Tag>;
 };
 
 Heading.propTypes = {
