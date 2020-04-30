@@ -8,5 +8,5 @@ import PageTitle from './PageTitle.component';
 export default { title: 'Molecules/Page Title' };
 
 export const pageTitle = () => (
-  <PageTitle heading="This is a PageTitle" />
+  <PageTitle heading="This is the page title" />
 );
