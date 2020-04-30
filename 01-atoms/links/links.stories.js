@@ -11,6 +11,7 @@ export const link = () => (
   <Link 
     children="This is my link text" 
     linkURL="https://github.com/emulsify-ds/emulsify-drupal"
-    linkTarget="_blank" 
+    linkTarget="_blank"
+    linkTitleText="This is my title text" 
   />
 );
