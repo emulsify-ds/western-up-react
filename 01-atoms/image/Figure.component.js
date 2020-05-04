@@ -6,20 +6,16 @@ import withModifiers from '../../_utils/withModifiers';
 
 const Figure = ({ modifiers, link, caption, outputImage, sources, image }) => 
   <figure className={withModifiers('figure')(modifiers)}>
-    <ConditionalLink 
-      link={link} 
-      modifiers={modifiers}
-    >
+    <ConditionalLink link={link} >
       <ResponsiveImage 
         outputImage={outputImage}
         sources={sources}
         image={image}
       />
     </ConditionalLink>
-    <figcaption className={withModifiers('caption')(modifiers)}>
+    <figcaption className='figure__caption'>
       { caption }
     </figcaption>
-    
   </figure>;
 
 Figure.propTypes = {
@@ -37,7 +33,7 @@ const ConditionalLink = ({ link, modifiers, children }) =>
   <>
     { link ? (
       <a 
-        className={withModifiers('link')(modifiers)} 
+        className='link'
         href={link}
       >
         {children}
