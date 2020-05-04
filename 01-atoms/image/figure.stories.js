@@ -10,8 +10,8 @@ export const figure = () => (
   <Figure
     outputImage={true}
     caption='This is an image caption.'
-    link='#'
+    url='#'
     alt='Random Image from Picsum'
-    src='https://picsum.photos/300/400.jpg'
+    src='https://placeimg.com/1200/200/tech'
   />
 )
