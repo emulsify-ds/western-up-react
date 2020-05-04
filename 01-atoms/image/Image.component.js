@@ -2,26 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withModifiers from '../../_utils/withModifiers';
 
-const Image = ({ modifiers, imageSrcset, imageSizes, imageSrc, imageAlt, imageTitle }) => {
+const Image = ({ modifiers, src, srcset, sizes, alt, title }) => {
   return (
     <img
-    className={withModifiers('img')(modifiers)}
-      srcSet={imageSrcset}
-      sizes={imageSizes}
-      src={imageSrc}
-      alt={imageAlt}
-      title={imageTitle}
+      className={withModifiers('img')(modifiers)}
+      src={src}
+      srcSet={srcset}
+      sizes={sizes}
+      alt={alt}
+      title={title}
     />
   );
 }
 
-Image.propTypes = {
+export const imagePropType = PropTypes.shape({
   modifiers: PropTypes.arrayOf(PropTypes.string),
-  imageSrcset: PropTypes.string,
-  imageSizes: PropTypes.string,
-  imageSrc: PropTypes.string,
-  imageAlt: PropTypes.string,
-  imageTitle: PropTypes.string
-};
+  src: PropTypes.string,
+  srcset: PropTypes.string,
+  sizes: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string
+});
+
+Image.propTypes = imagePropType;
 
 export default Image;

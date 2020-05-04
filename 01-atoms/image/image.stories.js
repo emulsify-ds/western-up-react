@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Image from './Image.component';
 
 /**
@@ -9,16 +8,16 @@ export default { title: 'Atoms/Image' };
 
 export const plain = () => (
   <Image
-    imageAlt='Random Image from Picsum'
-    imageSrc='https://picsum.photos/300/400.jpg'
+    src='https://picsum.photos/300/400.jpg'
+    alt='Random Image from Picsum'
   />
 )
 
 export const srcSet = () => (
   <Image
-    imageAlt='Random Image from Picsum using srcset'
-    imageSrcset='https://picsum.photos/400/300 400w, https://picsum.photos/800/700 800w'
-    imageSizes='(max-width:600px) 400px, 800px'
-    imageSrc='https://picsum.photos/400/300'
+    src='https://picsum.photos/400/300'
+    alt='Random Image from Picsum using srcset'
+    srcset='https://picsum.photos/400/300 400w, https://picsum.photos/800/700 800w'
+    sizes='(max-width:600px) 400px, 800px'
   />
 )
