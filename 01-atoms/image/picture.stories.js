@@ -18,9 +18,7 @@ export const picture = () => (
         'source': 'https://picsum.photos/300/400.jpg'
       }
     ]}
-    image = {{
-      alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/300/400.jpg'
-    }}
+    alt='Random Image from Picsum'
+    src='https://picsum.photos/300/400.jpg'
   />
 )

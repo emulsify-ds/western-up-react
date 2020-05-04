@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image, { imagePropType } from './Image.component';
+import Image, { imageTypeProps } from './Image.component';
 import withModifiers from '../../_utils/withModifiers';
 
-const ResponsiveImage = ({ outputImage, modifiers, sources = [], image: { src, srcset, sizes, alt, title } }) => 
+const ResponsiveImage = ({ outputImage, modifiers, sources = [], src, srcset, sizes, alt, title }) => 
   <>
     { outputImage ? (
       <Image
@@ -35,7 +35,7 @@ ResponsiveImage.propTypes = {
     media: PropTypes.string,
     source: PropTypes.string.isRequired
   }),
-  image: imagePropType
+  ...imageTypeProps
 };
 
 export default ResponsiveImage;

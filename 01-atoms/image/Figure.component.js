@@ -1,16 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { imagePropType } from './Image.component';
+import { imageTypeProps } from './Image.component';
 import ResponsiveImage from './ResponsiveImage.component';
 import withModifiers from '../../_utils/withModifiers';
 
-const Figure = ({ modifiers, link, caption, outputImage, sources, image }) => 
+const Figure = ({ modifiers, link, caption, outputImage, sources, src, srcset, sizes, alt, title }) => 
   <figure className={withModifiers('figure')(modifiers)}>
     <ConditionalLink link={link} >
       <ResponsiveImage 
         outputImage={outputImage}
         sources={sources}
-        image={image}
+        src={src}
+        srcSet={srcset}
+        sizes={sizes}
+        alt={alt}
+        title={title}
       />
     </ConditionalLink>
     <figcaption className='figure__caption'>
@@ -26,7 +30,7 @@ Figure.propTypes = {
     media: PropTypes.string,
     source: PropTypes.string.isRequired
   }),
-  image: imagePropType
+  ...imageTypeProps
 };
 
 const ConditionalLink = ({ link, modifiers, children }) => 

@@ -11,9 +11,7 @@ export const figure = () => (
     outputImage={true}
     caption='This is an image caption.'
     link='#'
-    image={{
-      alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/300/400.jpg'
-    }}
+    alt='Random Image from Picsum'
+    src='https://picsum.photos/300/400.jpg'
   />
 )

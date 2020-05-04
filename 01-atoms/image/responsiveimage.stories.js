@@ -8,7 +8,7 @@ export default { title: 'Atoms/Image' };
 
 export const responsive = () => (
   <ResponsiveImage
-    outputImage={true}
+    outputImage={false}
     sources={[
       {
         'media': '(min-width: 650px)', 
@@ -19,9 +19,7 @@ export const responsive = () => (
         'source': 'https://picsum.photos/300/400.jpg'
       }
     ]}
-    image={{
-      alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/300/400.jpg'
-    }}
+    alt='Random Image from Picsum'
+    src='https://picsum.photos/300/400.jpg'
   />
 )

@@ -15,7 +15,7 @@ const Image = ({ modifiers, src, srcset, sizes, alt, title }) => {
   );
 }
 
-export const imagePropType = PropTypes.shape({
+export const imageTypeProps = PropTypes.shape({
   modifiers: PropTypes.arrayOf(PropTypes.string),
   src: PropTypes.string,
   srcset: PropTypes.string,
@@ -24,6 +24,6 @@ export const imagePropType = PropTypes.shape({
   title: PropTypes.string
 });
 
-Image.propTypes = imagePropType;
+Image.propTypes = imageTypeProps;
 
 export default Image;
