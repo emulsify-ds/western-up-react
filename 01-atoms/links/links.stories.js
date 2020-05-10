@@ -10,8 +10,8 @@ export default { title: 'Atoms/Link' };
 export const link = () => (
   <Link 
     children="This is my link text" 
-    linkURL="https://github.com/emulsify-ds/emulsify-drupal"
-    linkTarget="_blank"
-    linkTitleText="This is my title text" 
+    url="https://github.com/emulsify-ds/emulsify-drupal"
+    target="_blank"
+    title="This is my title text" 
   />
 );

@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withModifiers from '../../_utils/withModifiers';
 
-const Link = ({children, modifiers, linkURL, linkTarget, linkTitleText }) => {
+const Link = ({children, modifiers, url, target, title }) => {
   return (
     <a
-      href={linkURL}
-      target={linkTarget}
-      title={linkTitleText}
+      href={url}
+      target={target}
+      title={title}
       className={withModifiers('link')(modifiers)}
     >
       {children}
@@ -17,9 +17,9 @@ const Link = ({children, modifiers, linkURL, linkTarget, linkTitleText }) => {
 
 Link.propTypes = {
   children: PropTypes.node,
-  linkURL: PropTypes.string.isRequired,
-  linkTarget: PropTypes.string,
-  linkTitleText: PropTypes.string,
+  url: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  title: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
 };
 
