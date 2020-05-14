@@ -10,13 +10,7 @@ const Figure = ({ modifiers, url, caption, outputImage, sources, image }) =>
       <ResponsiveImage
         outputImage={outputImage}
         sources={sources}
-        image={{
-          src: image.src,
-          srcSet: image.srcset,
-          sizes: image.sizes,
-          alt: image.alt,
-          title: image.title,
-        }}
+        image={image}
       />
     </ConditionalLink>
     <figcaption className='figure__caption'>

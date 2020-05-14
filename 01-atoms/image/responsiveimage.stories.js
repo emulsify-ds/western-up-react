@@ -23,6 +23,5 @@ export const responsive = () => (
       alt: 'Random Image from Picsum',
       src: 'https://picsum.photos/300/400.jpg'
     }}
-    a
   />
 )
