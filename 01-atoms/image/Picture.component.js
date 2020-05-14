@@ -3,16 +3,16 @@ import PropTypes, { any } from 'prop-types';
 import Image, { imageTypeProps } from './Image.component';
 import withModifiers from '../../_utils/withModifiers';
 
-const Picture = ({ modifiers, sources = [], src, srcset, sizes, alt, title }) => {
+const Picture = ({ modifiers, sources = [], image }) => {
   return (
     <picture className={withModifiers('picture')(modifiers)}>
       { sources.map( source => <source {...source} /> ) }
       <Image
-        src={src}
-        srcSet={srcset}
-        sizes={sizes}
-        alt={alt}
-        title={title}
+        src={image.src}
+        srcSet={image.srcset}
+        sizes={image.sizes}
+        alt={image.alt}
+        title={image.title}
       />
     </picture>
   );
@@ -24,7 +24,7 @@ Picture.propTypes = {
     media: PropTypes.string,
     source: PropTypes.string.isRequired
   }),
-  ...imageTypeProps
+  image: imageTypeProps
 };
 
 export default Picture;
