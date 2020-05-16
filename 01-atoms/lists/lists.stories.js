@@ -8,6 +8,9 @@ import UnorderedList from './UnorderedList.component';
  */
 export default { title: 'Atoms/Lists' };
 
+// @todo: The <code> tag in this example content does not render correctly.
+// There are multiple ways to address this in React and can be address in a
+// later story.
 export const definitionList = () => (
   <DefinitionList
     items={[
