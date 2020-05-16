@@ -8,10 +8,10 @@ const ListItem = ({label, content}) => (
   </li>
 );
 
-export const ListItemType = PropTypes.shape({
+export const ListItemType = {
   content: PropTypes.string.isRequired,
   label: PropTypes.string,
-});
+};
 
 ListItem.propTypes = ListItemType;
 

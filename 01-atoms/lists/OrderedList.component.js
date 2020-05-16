@@ -14,7 +14,7 @@ const OrderedList = ({block = 'ol', modifiers, items}) => (
 OrderedList.propTypes = {
   block: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
-  items: PropTypes.arrayOf(ListItemType).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape(ListItemType)).isRequired,
 };
 
 export default OrderedList;

@@ -14,7 +14,7 @@ const UnorderedList = ({block = 'ul', modifiers, items}) => (
 UnorderedList.propTypes = {
   block: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
-  items: PropTypes.arrayOf(ListItemType).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape(ListItemType)).isRequired,
 };
 
 export default UnorderedList;

@@ -1,4 +1,5 @@
 import React from 'react';
+import DefinitionList from './DefinitionList.component';
 import OrderedList from './OrderedList.component';
 import UnorderedList from './UnorderedList.component';
 
@@ -6,6 +7,29 @@ import UnorderedList from './UnorderedList.component';
  * Storybook Definition.
  */
 export default { title: 'Atoms/Lists' };
+
+export const definitionList = () => (
+  <DefinitionList
+    items={[
+      {
+        term: 'Definition List',
+        definition: 'A number of connected items or names written or printed consecutively, typically one below the other.',
+      },
+      {
+        term: 'This is a term.',
+        definition: 'This is the definition of that term, which both live in a <code>dl</code>.',
+      },
+      {
+        term: 'Here is another term.',
+        definition: 'And it gets a definition too, which is this line.',
+      },
+      {
+        term: 'Here is one last term.',
+        definition: 'With the final definition.',
+      }
+    ]}
+  />
+);
 
 export const orderedList = () => (
   <OrderedList
