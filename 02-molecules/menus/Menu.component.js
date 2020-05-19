@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import UnorderedList from '../../01-atoms/lists/UnorderedList.component';
-import bem from '../../../_utils/bem'
+import bem from '../../_utils/bem';
 
 const Menu = ({block = 'temp', modifiers = [], items}) => (
   <UnorderedList
     className={bem(block, 'menu', modifiers)}
-    items={items}
+    items={items.map(item => (
+      { content: item.title }
+    ))}
   />
 );
 

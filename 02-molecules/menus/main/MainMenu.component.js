@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Menu from '../Menu.component';
 
-const MainMenu = () => (
+const MainMenu = ({items}) => (
   <nav >
     <a href="#" id="toggle-expand" className="toggle-expand">
       <span className="toggle-expand__open">
@@ -22,7 +23,7 @@ const MainMenu = () => (
         menu_class: "main-menu",
         items: menu_items,
       } %} */}
-      Menu Here
+      <Menu items={items}/>
     </div>
   </nav>
 );
