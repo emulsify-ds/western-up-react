@@ -3,10 +3,18 @@ import PropTypes from 'prop-types';
 import ListItem, { ListItemType } from './ListItem.component';
 import bem from '../../_utils/bem';
 
-const OrderedList = ({block = 'ol', modifiers, items}) => (
+const OrderedList = ({block = 'ol', element = 'item', modifiers = [], items}) => (
   <ol className={bem(block, null, modifiers)}>
     {items.map(({content, label}, index) => (
-      <ListItem key={index} content={content} label={label} />
+      <ListItem
+        key={index}
+        block={block}
+        element={element}
+        modifiers={modifiers}
+        label={label}
+      >
+        {content}
+      </ListItem>
     ))}
   </ol>
 );
