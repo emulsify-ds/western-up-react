@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { arrayOf } from 'prop-types';
 import Menu from '../Menu.component';
+import { menuItemPropType } from '../MenuItem.component';
 
 const MainMenu = ({items}) => (
   <nav >
@@ -26,5 +27,9 @@ const MainMenu = ({items}) => (
     </div>
   </nav>
 );
+
+MainMenu.propTypes = {
+  items: arrayOf(PropTypes.shape(menuItemPropType))
+}
 
 export default MainMenu;
