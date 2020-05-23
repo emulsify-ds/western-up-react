@@ -19,11 +19,10 @@ const MainMenu = ({items}) => (
       </span>
     </a>
     <div id="main-nav" className="main-nav">
-      {/* {% include "@molecules/menus/_menu.twig" with {
-        menu_class: "main-menu",
-        items: menu_items,
-      } %} */}
-      <Menu items={items}/>
+      <Menu
+        block='main-menu'
+        items={items}
+      />
     </div>
   </nav>
 );

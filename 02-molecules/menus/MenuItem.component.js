@@ -1,22 +1,46 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
-import ListItem from '../../01-atoms/lists/ListItem.component';
-import bem from '../../../_utils/bem'
+import Menu from './Menu.component';
+import bem from '../../_utils/bem';
 
-const MenuItem = ({block = 'temp', modifiers = [], items}) => (
-  <ListItem
-    className={bem(block, 'idontknow', modifiers)}
-    items={items}
-  />
-);
+const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = []}) => {
+  const mods = [].concat(
+    modifiers,
+    sublinks ? ['with-sub'] : []
+  );
 
-MenuItem.PropTypes = {
+  return (
+    <li className={bem(block, 'item', mods)}>
+      <a
+        className={bem(block, 'link', mods)}
+        href={url}
+      >
+        { title }
+      </a>
+      { sublinks && (
+        <>
+          <span className="expand-sub"></span>
+          <Menu
+            block={block}
+            level={1}
+            items={sublinks}
+          />
+        </>
+      )}
+    </li>
+  );
+}
+
+// Defines the menu item shape and then adds the shape to itself
+const menuItemShape = {
+  title: PropTypes.string,
+  url: PropTypes.string,
   block: PropTypes.string,
   modifiers: arrayOf(PropTypes.string),
-  items: arrayOf({
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string,
-  })
 }
+menuItemShape.sublinks = PropTypes.arrayOf(PropTypes.shape(menuItemShape));
+export const menuItemPropType = menuItemShape;
+
+MenuItem.propTypes = PropTypes.shape(menuItemPropType);
 
 export default MenuItem;
