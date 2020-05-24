@@ -1,8 +1,10 @@
 import React from 'react';
+import bem from '../../../_utils/bem';
+import PropTypes from 'prop-types';
 
-const InstagramIcon = () => (
+const InstagramIcon = ({block, element = 'icon', modifiers = []}) => (
   <svg
-    className='icon'
+    className={bem(block, element, modifiers)}
     viewBox="0 0 448 512"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -10,5 +12,11 @@ const InstagramIcon = () => (
   </svg>
 
 );
+
+InstagramIcon.prototype = {
+  block: PropTypes.string,
+  element: PropTypes.string,
+  modifiers: PropTypes.arrayOf(PropTypes.string)
+}
 
 export default InstagramIcon;

@@ -6,7 +6,7 @@ import InlineMenu from './InlineMenu.component';
  */
 export default { title: 'Molecules/Menus' };
 
-export const inlineMenu = () => (
+export const inline = () => (
   <InlineMenu
     items={[
       { title: 'Test', url: '#' },
