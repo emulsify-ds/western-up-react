@@ -13,19 +13,21 @@ const Breadcrumbs = ({items}) => (
     <h2 className={ bem('visually-hidden') } id='system-breadcrumb'>
       Breadcrumb
     </h2>
-    <ol className={ bem(blockName) }>
-      { items.map(item => (
-        <li className={ bem(blockName, 'item') }>
-          { item.url ? (
-            <a className={ bem(blockName, 'link') } href={ item.url }>
-              { item.text }
-            </a>
-          ) : (
-            item.text
-          )}
-        </li>
-      ))}
-    </ol>
+    { items && (
+      <ol className={ bem(blockName) }>
+        { items.map(item => (
+          <li className={ bem(blockName, 'item') }>
+            { item.url ? (
+              <a className={ bem(blockName, 'link') } href={ item.url }>
+                { item.text }
+              </a>
+            ) : (
+              item.text
+            )}
+          </li>
+        ))}
+      </ol>
+    )}
   </nav>
 );
 

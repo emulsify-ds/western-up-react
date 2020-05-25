@@ -1,6 +1,6 @@
 import React from 'react';
-
 import Breadcrumbs from './Breadcrumbs.component';
+import { items } from './breadcrumbs.data.json';
 
 /**
  * Storybook Definition.
@@ -8,11 +8,5 @@ import Breadcrumbs from './Breadcrumbs.component';
 export default { title: 'Molecules/Menus' };
 
 export const breadcrumbs = () => (
-  <Breadcrumbs
-    items={[
-      { text: 'Home', url: '#' },
-      { text: 'Parent ', url: '#' },
-      { text: 'Current Page' },
-    ]}
-  />
+  <Breadcrumbs items={items} />
 );
