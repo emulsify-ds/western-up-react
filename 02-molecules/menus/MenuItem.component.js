@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import Menu from './Menu.component';
 import bem from '../../_utils/bem';
 
 const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = []}) => {
+  const [isExpanded, setExpanded] = useState(false);
+  const toggleExpanded = () => setExpanded(!isExpanded);
+  const expandedModifiers = isExpanded ? ['open'] : [];
+  const submenuModifiers = isExpanded ? ['sub-open'] : [];
+
   const mods = [].concat(
     modifiers,
     sublinks ? ['with-sub'] : []
@@ -19,11 +24,15 @@ const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = []}) => {
       </a>
       { sublinks && (
         <>
-          <span className="expand-sub"></span>
+          <span
+            className={bem('expand-sub', '', expandedModifiers)}
+            onClick={toggleExpanded}
+          />
           <Menu
             block={block}
             level={1}
             items={sublinks}
+            modifiers={submenuModifiers}
           />
         </>
       )}
