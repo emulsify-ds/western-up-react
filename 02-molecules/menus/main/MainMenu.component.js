@@ -1,32 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import Menu from '../Menu.component';
+import MenuIcon from '../../../01-atoms/image/icons/MenuIcon.component';
 import { menuItemPropType } from '../MenuItem.component';
+import bem from '../../../_utils/bem';
 
-const MainMenu = ({items}) => (
-  <nav >
-    <a href="#" id="toggle-expand" className="toggle-expand">
-      <span className="toggle-expand__open">
-        Open Icon
-        {/* {% include "@atoms/images/icons/_icon.twig" with {
-          icon_base_class: "icon",
-          icon_blockname: "toggle-expand",
-          icon_name: "menu",
-        } %} */}
-        <span className="toggle-expand__text">Menu</span>
-      </span>
-      <span className="toggle-expand__close">
-        <span className="toggle-expand__text">Close</span>
-      </span>
-    </a>
-    <div id="main-nav" className="main-nav">
-      <Menu
-        block='main-menu'
-        items={items}
-      />
-    </div>
-  </nav>
-);
+const MainMenu = ({items}) => {
+  const [isOpen, setOpen] = useState(false);
+  const toggleMenu = () => setOpen(!isOpen);
+  const toggleModifiers = isOpen ? ['open'] : [];
+
+  return (
+    <nav >
+      <a
+        id="toggle-expand"
+        className={bem('toggle-expand', '', toggleModifiers)}
+        onClick={toggleMenu}
+      >
+        <span className={bem('toggle-expand', 'open')}>
+          <MenuIcon block="toggle-expand" element="icon"/>
+          <span className={bem('toggle-expand', 'text')}>Menu</span>
+        </span>
+        <span className={bem('toggle-expand', 'close')}>
+          <span className={bem('toggle-expand', 'text')}>Close</span>
+        </span>
+      </a>
+      <div
+        id="main-nav"
+        className={bem('main-nav', '', toggleModifiers)}
+      >
+        <Menu
+          block='main-menu'
+          items={items}
+        />
+      </div>
+    </nav>
+  );
+}
 
 MainMenu.propTypes = {
   items: arrayOf(PropTypes.shape(menuItemPropType))

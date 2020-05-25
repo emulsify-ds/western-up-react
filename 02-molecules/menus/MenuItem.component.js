@@ -32,7 +32,7 @@ const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = []}) => {
 }
 
 // Defines the menu item shape and then recursively adds the shape to itself as
-//  an array of sublinks. Export this shape for other components to use.
+// an array of sublinks. Export this shape for other components to use.
 const menuItemShape = {
   title: PropTypes.string,
   url: PropTypes.string,
