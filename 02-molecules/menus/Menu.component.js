@@ -11,7 +11,7 @@ const Menu = ({block = 'menu', element, modifiers = [], level, items}) => {
 
   return (
     <ul className={bem(block, element, mods)}>
-      { items.map(({title, url, below}, id) => (
+      { items && items.map(({title, url, below}, id) => (
         <MenuItem
           key={id}
           block={block}

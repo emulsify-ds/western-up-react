@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
-import Breadcrumbs from '../../../02-molecules/menus/breadcrumbs/Breadcrumbs.component'
+import Breadcrumbs from '../../../02-molecules/menus/breadcrumbs/Breadcrumbs.component';
+import MainMenu from '../../../02-molecules/menus/main/MainMenu.component';
 import { menuItemPropType } from '../../../02-molecules/menus/MenuItem.component';
 import bem from '../../../_utils/bem';
 
-const SiteHeader = ({breadcrumbs}) => {
+const SiteHeader = ({breadcrumbs, menu}) => {
   const block = 'header';
   return (
     <header className={bem(block)}>
@@ -13,7 +14,7 @@ const SiteHeader = ({breadcrumbs}) => {
           LOGO
         </div>
         <div className={bem(block, 'menu')}>
-          main menu
+          <MainMenu items={menu} />
         </div>
       </div>
       <div className={bem(block, 'secondary')}>
