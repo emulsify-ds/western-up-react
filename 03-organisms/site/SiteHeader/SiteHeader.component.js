@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import Link from '../../../01-atoms/links/Link.component';
-import Logo from '../../../01-atoms/image/Logo/Logo.component';
-import Breadcrumbs from '../../../02-molecules/menus/breadcrumbs/Breadcrumbs.component';
-import MainMenu from '../../../02-molecules/menus/main/MainMenu.component';
+import Logo from '../../../01-atoms/images/Logo/Logo.component';
+import Breadcrumbs from '../../../02-molecules/menus/Breadcrumbs/Breadcrumbs.component';
+import MainMenu from '../../../02-molecules/menus/MainMenu/MainMenu.component';
 import { menuItemPropType } from '../../../02-molecules/menus/MenuItem.component';
 import bem from '../../../_utils/bem';
 

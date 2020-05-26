@@ -1,6 +1,6 @@
 import React from 'react';
 import Breadcrumbs from './Breadcrumbs.component';
-import { items } from './breadcrumbs.data.json';
+import { items } from './Breadcrumbs.data.json';
 
 /**
  * Storybook Definition.

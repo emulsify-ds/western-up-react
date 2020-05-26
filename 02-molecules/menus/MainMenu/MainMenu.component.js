@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import Menu from '../Menu.component';
-import MenuIcon from '../../../01-atoms/image/icons/MenuIcon.component';
+import MenuIcon from '../../../01-atoms/images/icons/MenuIcon.component';
 import { menuItemPropType } from '../MenuItem.component';
 import bem from '../../../_utils/bem';
 

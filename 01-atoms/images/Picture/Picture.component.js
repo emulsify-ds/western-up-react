@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes, { any } from 'prop-types';
-import Image, { imageTypeProps } from './Image.component';
-import withModifiers from '../../_utils/withModifiers';
+import Image, { imageTypeProps } from '../Image/Image.component';
+import withModifiers from '../../../_utils/withModifiers';
 
 const Picture = ({ modifiers, sources = [], image }) => {
   return (

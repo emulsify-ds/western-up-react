@@ -1,6 +1,6 @@
 import React from 'react';
 import MainMenu from './MainMenu.component';
-import { items } from './mainmenu.data';
+import { items } from './MainMenu.data';
 
 /**
  * Storybook Definition.

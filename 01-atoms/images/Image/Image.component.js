@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withModifiers from '../../_utils/withModifiers';
+import withModifiers from '../../../_utils/withModifiers';
 
 const Image = ({ modifiers, src, srcset, sizes, alt, title }) => {
   return (

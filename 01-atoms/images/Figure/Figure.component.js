@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { imageTypeProps } from './Image.component';
-import ResponsiveImage from './ResponsiveImage.component';
-import withModifiers from '../../_utils/withModifiers';
+import { imageTypeProps } from '../Image/Image.component';
+import ResponsiveImage from '../ResponsiveImage/ResponsiveImage.component';
+import withModifiers from '../../../_utils/withModifiers';
 
 const Figure = ({ modifiers, url, caption, outputImage, sources, image }) => (
   <figure className={withModifiers('figure')(modifiers)}>

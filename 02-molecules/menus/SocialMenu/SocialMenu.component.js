@@ -1,7 +1,7 @@
 import React from 'react';
-import TwitterIcon from '../../../01-atoms/image/icons/TwitterIcon.component';
-import FacebookIcon from '../../../01-atoms/image/icons/FacebookIcon.component';
-import InstagramIcon from '../../../01-atoms/image/icons/InstagramIcon.component';
+import TwitterIcon from '../../../01-atoms/images/icons/TwitterIcon.component';
+import FacebookIcon from '../../../01-atoms/images/icons/FacebookIcon.component';
+import InstagramIcon from '../../../01-atoms/images/icons/InstagramIcon.component';
 import bem from '../../../_utils/bem';
 
 const SocialMenu = () => {
