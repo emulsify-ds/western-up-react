@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
+import Link from '../../../01-atoms/links/Link.component';
 import Logo from '../../../01-atoms/image/Logo/Logo.component';
 import Breadcrumbs from '../../../02-molecules/menus/breadcrumbs/Breadcrumbs.component';
 import MainMenu from '../../../02-molecules/menus/main/MainMenu.component';
@@ -12,9 +13,9 @@ const SiteHeader = ({breadcrumbs, menu}) => {
     <header className={bem(block)}>
       <div className={bem(block, 'primary')}>
         <div className={bem(block, 'branding')}>
-          <a href="logo-link">
+          <Link modifiers={["logo-link"]} href="/">
             <Logo block="logo" element="image" />
-          </a>
+          </Link>
         </div>
         <div className={bem(block, 'menu')}>
           <MainMenu items={menu} />
