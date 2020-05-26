@@ -7,13 +7,13 @@ import MainMenu from '../../../02-molecules/menus/main/MainMenu.component';
 import { menuItemPropType } from '../../../02-molecules/menus/MenuItem.component';
 import bem from '../../../_utils/bem';
 
-const SiteHeader = ({breadcrumbs, menu}) => {
+const SiteHeader = ({ breadcrumbs, menu }) => {
   const block = 'header';
   return (
     <header className={bem(block)}>
       <div className={bem(block, 'primary')}>
         <div className={bem(block, 'branding')}>
-          <Link modifiers={["logo-link"]} href="/">
+          <Link modifiers={['logo-link']} href="/">
             <Logo block="logo" element="image" />
           </Link>
         </div>
@@ -26,16 +26,14 @@ const SiteHeader = ({breadcrumbs, menu}) => {
       </div>
     </header>
   );
-}
+};
 
 SiteHeader.propTypes = {
   breadcrumbs: PropTypes.arrayOf({
     url: PropTypes.string,
     text: PropTypes.string.isRequired,
   }),
-  menu: PropTypes.arrayOf(
-    PropTypes.shape(menuItemPropType)
-  )
-}
+  menu: PropTypes.arrayOf(PropTypes.shape(menuItemPropType)),
+};
 
 export default SiteHeader;

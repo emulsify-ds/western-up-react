@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DefinitionListItem, { DefinitionListItemType } from './DefinitionListItem.component';
+import DefinitionListItem, {
+  DefinitionListItemType,
+} from './DefinitionListItem.component';
 import bem from '../../_utils/bem';
 
-const DefinitionList = ({block = 'dl', modifiers, items}) => (
+const DefinitionList = ({ block = 'dl', modifiers, items }) => (
   <dl className={bem(block, null, modifiers)}>
-    {items.map(({term, definition}, index) => (
+    {items.map(({ term, definition }, index) => (
       <DefinitionListItem key={index} term={term} definition={definition} />
     ))}
   </dl>

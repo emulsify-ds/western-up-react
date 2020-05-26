@@ -7,7 +7,7 @@ import bem from '../../_utils/bem';
 
 const blockName = 'text-with-image';
 
-const TextWithImage = ({modifiers, content, image, outputImage, sources}) => (
+const TextWithImage = ({ modifiers, content, image, outputImage, sources }) => (
   <div className={bem(blockName, null, modifiers)}>
     <div className={bem(blockName, 'image')}>
       <ResponsiveImage
@@ -29,7 +29,7 @@ TextWithImage.propTypes = {
   image: imageTypeProps,
   sources: PropTypes.arrayOf({
     media: PropTypes.string,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   }),
 };
 

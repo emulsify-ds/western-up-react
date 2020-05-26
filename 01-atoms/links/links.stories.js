@@ -8,10 +8,10 @@ import Link from './Link.component';
 export default { title: 'Atoms/Link' };
 
 export const link = () => (
-  <Link 
-    children="This is my link text" 
+  <Link
+    children="This is my link text"
     url="https://github.com/emulsify-ds/emulsify-drupal"
     target="_blank"
-    title="This is my title text" 
+    title="This is my title text"
   />
 );

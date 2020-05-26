@@ -13,7 +13,7 @@ const Image = ({ modifiers, src, srcset, sizes, alt, title }) => {
       title={title}
     />
   );
-}
+};
 
 export const imageTypeProps = PropTypes.shape({
   modifiers: PropTypes.arrayOf(PropTypes.string),
@@ -21,7 +21,7 @@ export const imageTypeProps = PropTypes.shape({
   srcset: PropTypes.string,
   sizes: PropTypes.string,
   alt: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 });
 
 Image.propTypes = imageTypeProps;

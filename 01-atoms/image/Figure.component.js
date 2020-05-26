@@ -4,19 +4,18 @@ import { imageTypeProps } from './Image.component';
 import ResponsiveImage from './ResponsiveImage.component';
 import withModifiers from '../../_utils/withModifiers';
 
-const Figure = ({ modifiers, url, caption, outputImage, sources, image }) =>
+const Figure = ({ modifiers, url, caption, outputImage, sources, image }) => (
   <figure className={withModifiers('figure')(modifiers)}>
-    <ConditionalLink url={url} >
+    <ConditionalLink url={url}>
       <ResponsiveImage
         outputImage={outputImage}
         sources={sources}
         image={image}
       />
     </ConditionalLink>
-    <figcaption className='figure__caption'>
-      { caption }
-    </figcaption>
-  </figure>;
+    <figcaption className="figure__caption">{caption}</figcaption>
+  </figure>
+);
 
 Figure.propTypes = {
   modifiers: PropTypes.arrayOf(PropTypes.string),
@@ -25,17 +24,20 @@ Figure.propTypes = {
   outputImage: PropTypes.bool,
   sources: PropTypes.arrayOf({
     media: PropTypes.string,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   }),
 };
 
-const ConditionalLink = ({ url, children }) =>
+const ConditionalLink = ({ url, children }) => (
   <>
-    { url ? (
-      <a className='link' href={url}>{children}</a>
+    {url ? (
+      <a className="link" href={url}>
+        {children}
+      </a>
     ) : (
-       children
+      children
     )}
-  </>;
+  </>
+);
 
 export default Figure;

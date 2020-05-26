@@ -12,10 +12,10 @@ export default { title: 'Atoms/Image' };
 
 export const icons = () => (
   <div className="icons-demo" id="icons">
-    { demoIcon(<FacebookIcon />, 'facebook') }
-    { demoIcon(<InstagramIcon />, 'instagram') }
-    { demoIcon(<MenuIcon />, 'menu') }
-    { demoIcon(<TwitterIcon />, 'twitter') }
+    {demoIcon(<FacebookIcon />, 'facebook')}
+    {demoIcon(<InstagramIcon />, 'instagram')}
+    {demoIcon(<MenuIcon />, 'menu')}
+    {demoIcon(<TwitterIcon />, 'twitter')}
   </div>
 );
 

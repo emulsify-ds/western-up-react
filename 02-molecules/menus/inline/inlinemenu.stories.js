@@ -7,8 +7,4 @@ import { items } from './InlineMenu.data.json';
  */
 export default { title: 'Molecules/Menus' };
 
-export const inline = () => (
-  <InlineMenu
-    items={items}
-  />
-);
+export const inline = () => <InlineMenu items={items} />;

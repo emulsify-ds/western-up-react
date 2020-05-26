@@ -7,6 +7,4 @@ import { items } from './breadcrumbs.data.json';
  */
 export default { title: 'Molecules/Menus' };
 
-export const breadcrumbs = () => (
-  <Breadcrumbs items={items} />
-);
+export const breadcrumbs = () => <Breadcrumbs items={items} />;

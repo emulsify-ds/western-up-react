@@ -28,6 +28,6 @@ const SocialMenu = () => {
       </li>
     </ul>
   );
-}
+};
 
 export default SocialMenu;

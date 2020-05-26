@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withModifiers from '../../_utils/withModifiers';
 
-const Link = ({children, modifiers, url, target, title }) => {
+const Link = ({ children, modifiers, url, target, title }) => {
   return (
     <a
       href={url}

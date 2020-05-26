@@ -6,7 +6,9 @@ import withModifiers from '../../_utils/withModifiers';
 const Picture = ({ modifiers, sources = [], image }) => {
   return (
     <picture className={withModifiers('picture')(modifiers)}>
-      { sources.map( source => <source {...source} /> ) }
+      {sources.map((source) => (
+        <source {...source} />
+      ))}
       <Image
         src={image.src}
         srcSet={image.srcset}
@@ -16,15 +18,15 @@ const Picture = ({ modifiers, sources = [], image }) => {
       />
     </picture>
   );
-}
+};
 
 Picture.propTypes = {
   modifiers: PropTypes.arrayOf(PropTypes.string),
   sources: PropTypes.arrayOf({
     media: PropTypes.string,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   }),
-  image: imageTypeProps
+  image: imageTypeProps,
 };
 
 export default Picture;

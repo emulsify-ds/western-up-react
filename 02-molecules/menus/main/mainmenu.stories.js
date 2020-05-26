@@ -7,8 +7,4 @@ import { items } from './mainmenu.data';
  */
 export default { title: 'Molecules/Menus' };
 
-export const main = () => (
-  <MainMenu
-    items={items}
-  />
-);
+export const main = () => <MainMenu items={items} />;

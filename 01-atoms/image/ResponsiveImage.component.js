@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Image, { imageTypeProps } from './Image.component';
 import withModifiers from '../../_utils/withModifiers';
 
-const ResponsiveImage = ({ outputImage, modifiers, sources = [], image }) =>
+const ResponsiveImage = ({ outputImage, modifiers, sources = [], image }) => (
   <>
-    { outputImage ? (
+    {outputImage ? (
       <Image
         modifiers={modifiers}
         src={image.src}
@@ -16,7 +16,9 @@ const ResponsiveImage = ({ outputImage, modifiers, sources = [], image }) =>
       />
     ) : (
       <picture className={withModifiers('picture')(modifiers)}>
-        { sources.map( source => <source {...source} /> ) }
+        {sources.map((source) => (
+          <source {...source} />
+        ))}
         <Image
           src={image.src}
           srcSet={image.srcset}
@@ -26,16 +28,17 @@ const ResponsiveImage = ({ outputImage, modifiers, sources = [], image }) =>
         />
       </picture>
     )}
-  </>;
+  </>
+);
 
 ResponsiveImage.propTypes = {
   outputImage: PropTypes.bool,
   modifiers: PropTypes.arrayOf(PropTypes.string),
   sources: PropTypes.arrayOf({
     media: PropTypes.string,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   }),
-  image: imageTypeProps
+  image: imageTypeProps,
 };
 
 export default ResponsiveImage;

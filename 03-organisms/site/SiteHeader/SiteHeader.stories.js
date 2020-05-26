@@ -9,8 +9,5 @@ import { items as menu } from '../../../02-molecules/menus/main/mainmenu.data.js
 export default { title: 'Organisms/Site' };
 
 export const header = () => (
-  <SiteHeader
-    breadcrumbs={breadcrumbs}
-    menu={menu}
-  />
+  <SiteHeader breadcrumbs={breadcrumbs} menu={menu} />
 );
