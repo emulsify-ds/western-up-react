@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withModifiers from '../../_utils/withModifiers';
+import bem from '../../_utils/bem';
 
-const Heading = ({
-  baseClass = 'heading',
-  children,
-  modifiers,
-  level = '1',
-}) => {
+const Heading = ({ block = 'heading', children, modifiers, level = '1' }) => {
   const Tag = `h${level}`;
-  return <Tag className={withModifiers(baseClass)(modifiers)}>{children}</Tag>;
+  return <Tag className={bem(block, '', modifiers)}>{children}</Tag>;
 };
 
 Heading.propTypes = {
-  children: PropTypes.string.isRequired,
+  block: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
+  children: PropTypes.element,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 
