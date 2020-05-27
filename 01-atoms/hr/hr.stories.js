@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Hr from './Hr.component';
 
 /**

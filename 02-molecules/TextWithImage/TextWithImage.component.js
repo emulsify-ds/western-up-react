@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ResponsiveImage from '../../01-atoms/image/ResponsiveImage.component';
-import { imageTypeProps } from '../../01-atoms/image/Image.component';
+import ResponsiveImage from '../../01-atoms/images/ResponsiveImage/ResponsiveImage.component';
+import { imageTypeProps } from '../../01-atoms/images/Image/Image.component';
 import Paragraph from '../../01-atoms/text/Paragraph.component';
 import bem from '../../_utils/bem';
 
 const blockName = 'text-with-image';
 
-const TextWithImage = ({modifiers, content, image, outputImage, sources}) => (
+const TextWithImage = ({ modifiers, content, image, outputImage, sources }) => (
   <div className={bem(blockName, null, modifiers)}>
     <div className={bem(blockName, 'image')}>
       <ResponsiveImage
@@ -29,7 +29,7 @@ TextWithImage.propTypes = {
   image: imageTypeProps,
   sources: PropTypes.arrayOf({
     media: PropTypes.string,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   }),
 };
 

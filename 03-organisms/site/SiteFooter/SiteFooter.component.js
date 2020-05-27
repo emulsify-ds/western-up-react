@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
-import InlineMenu from '../../../02-molecules/menus/inline/InlineMenu.component';
-import SocialMenu from '../../../02-molecules/menus/social/SocialMenu.component';
+import InlineMenu from '../../../02-molecules/menus/InlineMenu/InlineMenu.component';
+import SocialMenu from '../../../02-molecules/menus/SocialMenu/SocialMenu.component';
 import { menuItemPropType } from '../../../02-molecules/menus/MenuItem.component';
 import bem from '../../../_utils/bem';
 
-const SiteFooter = ({items}) => {
+const SiteFooter = ({ items }) => {
   const block = 'footer';
   return (
     <footer className={bem(block)}>
@@ -19,10 +19,10 @@ const SiteFooter = ({items}) => {
       </div>
     </footer>
   );
-}
+};
 
 SiteFooter.propTypes = {
-  items: arrayOf(PropTypes.shape(menuItemPropType))
-}
+  items: arrayOf(PropTypes.shape(menuItemPropType)),
+};
 
 export default SiteFooter;

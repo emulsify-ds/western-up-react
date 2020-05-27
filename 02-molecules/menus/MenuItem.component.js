@@ -3,26 +3,20 @@ import PropTypes, { arrayOf } from 'prop-types';
 import Menu from './Menu.component';
 import bem from '../../_utils/bem';
 
-const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = []}) => {
+const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = [] }) => {
   const [isExpanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(!isExpanded);
   const expandedModifiers = isExpanded ? ['open'] : [];
   const submenuModifiers = isExpanded ? ['sub-open'] : [];
 
-  const mods = [].concat(
-    modifiers,
-    sublinks ? ['with-sub'] : []
-  );
+  const mods = [].concat(modifiers, sublinks ? ['with-sub'] : []);
 
   return (
     <li className={bem(block, 'item', mods)}>
-      <a
-        className={bem(block, 'link', mods)}
-        href={url}
-      >
-        { title }
+      <a className={bem(block, 'link', mods)} href={url}>
+        {title}
       </a>
-      { sublinks && (
+      {sublinks && (
         <>
           <span
             className={bem('expand-sub', '', expandedModifiers)}
@@ -38,7 +32,7 @@ const MenuItem = ({ title, url, sublinks, block = 'menu', modifiers = []}) => {
       )}
     </li>
   );
-}
+};
 
 // Defines the menu item shape and then recursively adds the shape to itself as
 // an array of sublinks. Export this shape for other components to use.
@@ -47,7 +41,7 @@ const menuItemShape = {
   url: PropTypes.string,
   block: PropTypes.string,
   modifiers: arrayOf(PropTypes.string),
-}
+};
 menuItemShape.sublinks = PropTypes.arrayOf(PropTypes.shape(menuItemShape));
 export const menuItemPropType = menuItemShape;
 

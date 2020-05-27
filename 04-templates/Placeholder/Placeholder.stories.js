@@ -6,6 +6,4 @@ import Placeholder from './Placeholder.component';
  */
 export default { title: 'Template/Placeholder' };
 
-export const placeholder = () => (
-  <Placeholder />
-);
+export const placeholder = () => <Placeholder />;

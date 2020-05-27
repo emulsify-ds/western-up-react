@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DefinitionListItem = ({term, definition}) => (
+const DefinitionListItem = ({ term, definition }) => (
   <>
-    <dt className='dl-term'>{term}</dt>
-    <dd className='dl-def'>{definition}</dd>
+    <dt className="dl-term">{term}</dt>
+    <dd className="dl-def">{definition}</dd>
   </>
 );
 
