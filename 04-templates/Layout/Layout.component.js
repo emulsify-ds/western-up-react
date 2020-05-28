@@ -13,6 +13,7 @@ const Layout = ({
   mainContentModifiers = [],
   breadcrumbs,
   menu,
+  title,
   footerItems,
   hasSidebar,
 }) => {
@@ -27,7 +28,7 @@ const Layout = ({
       {/* //page_system */}
       <div className={bem('main', '', mainModifiers)}>
         <a id="main-content" tabIndex="-1"></a>
-        <PageTitle></PageTitle>
+        <PageTitle>{title}</PageTitle>
         {hasSidebar && (
           <aside className="main-sidebar" role="complementary">
             <Placeholder placeholder="Secondary Content" />
@@ -40,6 +41,21 @@ const Layout = ({
       <SiteFooter items={footerItems} />
     </div>
   );
+};
+
+Layout.propTypes = {
+  mainBlock: PropTypes.string,
+  mainModifiers: PropTypes.arrayOf(PropTypes.string),
+  layoutModifiers: PropTypes.arrayOf(PropTypes.string),
+  mainContentModifiers: PropTypes.arrayOf(PropTypes.string),
+  breadcrumbs: PropTypes.arrayOf({
+    url: PropTypes.string,
+    text: PropTypes.string.isRequired,
+  }),
+  menu: PropTypes.arrayOf(PropTypes.shape(menuItemPropType)),
+  title: PropTypes.element,
+  footerItems: arrayOf(PropTypes.shape(menuItemPropType)),
+  hasSidebar: PropTypes.bool,
 };
 
 export default Layout;

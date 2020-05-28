@@ -5,7 +5,7 @@ import bem from '../../_utils/bem';
 
 const PageTitle = ({ modifiers, children }) => (
   <div className={bem('page-title', 'wrapper', modifiers)}>
-    <Header level="1" block="page-title">
+    <Header level={1} block="page-title">
       {children}
     </Header>
   </div>
