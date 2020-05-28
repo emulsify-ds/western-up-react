@@ -13,7 +13,7 @@ const SiteHeader = ({ breadcrumbs, menu }) => {
     <header className={bem(block)}>
       <div className={bem(block, 'primary')}>
         <div className={bem(block, 'branding')}>
-          <Link modifiers={['logo-link']} href="/">
+          <Link modifiers={['logo-link']} url="/">
             <Logo block="logo" element="image" />
           </Link>
         </div>

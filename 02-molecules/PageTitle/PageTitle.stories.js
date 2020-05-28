@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PageTitle from './PageTitle.component';
 
 /**
@@ -7,4 +6,4 @@ import PageTitle from './PageTitle.component';
  */
 export default { title: 'Molecules/Page Title' };
 
-export const pageTitle = () => <PageTitle heading="This is the page title" />;
+export const pageTitle = () => <PageTitle>This is the page title</PageTitle>;

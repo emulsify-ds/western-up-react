@@ -4,16 +4,17 @@ import bem from '../../../_utils/bem';
 
 const blockName = 'breadcrumb';
 
-const Breadcrumbs = ({ items }) => (
-  <nav
-    className={bem(blockName, 'wrapper')}
-    role="navigation"
-    aria-labelledby="system-breadcrumb"
-  >
-    <h2 className={bem('visually-hidden')} id="system-breadcrumb">
-      Breadcrumb
-    </h2>
-    {items && (
+const Breadcrumbs = ({ items }) => {
+  if (!items) return null;
+  return (
+    <nav
+      className={bem(blockName, 'wrapper')}
+      role="navigation"
+      aria-labelledby="system-breadcrumb"
+    >
+      <h2 className={bem('visually-hidden')} id="system-breadcrumb">
+        Breadcrumb
+      </h2>
       <ol className={bem(blockName)}>
         {items.map((item) => (
           <li className={bem(blockName, 'item')}>
@@ -27,9 +28,9 @@ const Breadcrumbs = ({ items }) => (
           </li>
         ))}
       </ol>
-    )}
-  </nav>
-);
+    </nav>
+  );
+};
 
 Breadcrumbs.propTypes = {
   items: PropTypes.arrayOf({
