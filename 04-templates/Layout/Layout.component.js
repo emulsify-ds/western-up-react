@@ -1,10 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { arrayOf } from 'prop-types';
 import PageTitle from '../../02-molecules/PageTitle/PageTitle.component';
 import SiteHeader from '../../03-organisms/site/SiteHeader/SiteHeader.component';
 import SiteFooter from '../../03-organisms/site/SiteFooter/SiteFooter.component';
 import Placeholder from '../Placeholder/Placeholder.component';
 import bem from '../../_utils/bem';
+import { menuItemPropType } from '../../02-molecules/menus/MenuItem.component';
 
 const Layout = ({
   mainBlock = 'main-content',
