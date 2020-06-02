@@ -21,8 +21,7 @@ const Card = ({
     <div className={bem(block, '', cardModifiers)}>
       {/* Image */}
       <div className={bem(block, 'image')}>
-        {/* TODO If Image */}
-        <Image outputImage={outputImage} image={image} />
+        {image && <Image outputImage={outputImage} image={image} />}
       </div>
       {/* Content */}
       <div className={bem(block, 'content')}>
