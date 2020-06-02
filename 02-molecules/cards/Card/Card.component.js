@@ -27,22 +27,29 @@ const Card = ({
       {/* Content */}
       <div className={bem(block, 'content')}>
         {/* Heading */}
-        {/* TODO If Heading */}
-        <Heading level="2" children={heading} block={block} element="heading" />
+        {heading && (
+          <Heading
+            level="2"
+            children={heading}
+            block={block}
+            element="heading"
+          />
+        )}
         {/* Subheading */}
-        {/* TODO If Subheading */}
-        <Heading
-          level="3"
-          children={subheading}
-          block={block}
-          element="subheading"
-        />
+        {subheading && (
+          <Heading
+            level="3"
+            children={subheading}
+            block={block}
+            element="subheading"
+          />
+        )}
         {/* Body */}
-        {/* TODO If body */}
-        <Paragraph children={body} block={block} element="body" />
+        {body && <Paragraph children={body} block={block} element="body" />}
         {/* Button */}
-        {/* TODO If button */}
-        <Button children={buttonText} block={block} element="button" />
+        {buttonText && (
+          <Button children={buttonText} block={block} element="button" />
+        )}
       </div>
     </div>
   );
