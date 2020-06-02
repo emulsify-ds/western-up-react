@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from '../../../01-atoms/images/ResponsiveImage/ResponsiveImage.component';
 import { imageTypeProps } from '../../../01-atoms/images/Image/Image.component';
-
+import bem from '../../../_utils/bem';
 import Heading from '../../../01-atoms/text/Heading.component';
 import Paragraph from '../../../01-atoms/text/Paragraph.component';
 import Button from '../../../01-atoms/buttons/Button.component';
-import bem from '../../../_utils/bem';
 
 const Card = ({
   outputImage,
