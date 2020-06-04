@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Image from '../../../01-atoms/images/ResponsiveImage/ResponsiveImage.component';
 import { imageTypeProps } from '../Image/Image.component';
 import bem from '../../../_utils/bem';
-import './BackgroundImage';
 
 const BackgroundImage = ({ outputImage, image, children }) => {
   const block = 'react-background-image';
