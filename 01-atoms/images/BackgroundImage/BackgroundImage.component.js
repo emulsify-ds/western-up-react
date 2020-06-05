@@ -11,20 +11,13 @@ const BackgroundImage = ({
   block = 'background-image',
 }) => {
   return (
-    <div className={bem(block)} data-react-background-image>
+    <div className={bem(block)}>
       {/* Image */}
-      <div className={bem(block, 'image')} data-react-background-image__image>
+      <div className={bem(block, 'image')}>
         {image && <Image outputImage={outputImage} image={image} />}
       </div>
       {/* Content */}
-      {children && (
-        <div
-          className={bem(block, 'content')}
-          data-react-background-image__content
-        >
-          {children}
-        </div>
-      )}
+      {children && <div className={bem(block, 'content')}>{children}</div>}
     </div>
   );
 };
