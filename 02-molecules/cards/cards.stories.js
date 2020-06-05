@@ -17,10 +17,13 @@ export const card = () => (
     }}
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
-    body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
     linkText="Read more about this card"
     linkUrl="#"
-  />
+  >
+    Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit,
+    eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
+    nibh pulvinar a.
+  </Card>
 );
 export const cardWithBackground = () => (
   <Card
@@ -32,8 +35,11 @@ export const cardWithBackground = () => (
     }}
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
-    body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
     linkText="Read more about this card"
     linkUrl="#"
-  />
+  >
+    Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit,
+    eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
+    nibh pulvinar a.
+  </Card>
 );

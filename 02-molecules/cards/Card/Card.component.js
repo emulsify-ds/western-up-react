@@ -41,7 +41,7 @@ const Card = ({
           </Heading>
         )}
         {/* Body */}
-        {body && (
+        {children && (
           <Paragraph block={block} element="body">
             {children}
           </Paragraph>
