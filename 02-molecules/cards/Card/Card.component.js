@@ -5,49 +5,52 @@ import { imageTypeProps } from '../../../01-atoms/images/Image/Image.component';
 import bem from '../../../_utils/bem';
 import Heading from '../../../01-atoms/text/Heading.component';
 import Paragraph from '../../../01-atoms/text/Paragraph.component';
-import Button from '../../../01-atoms/buttons/Button.component';
+import Link from '../../../01-atoms/links/Link.component';
 
 const Card = ({
   outputImage,
   image,
   heading,
   subheading,
-  body,
-  buttonText,
+  children,
+  linkText,
+  linkUrl,
   cardModifiers,
 }) => {
   const block = 'card';
   return (
     <div className={bem(block, '', cardModifiers)}>
       {/* Image */}
-      <div className={bem(block, 'image')}>
-        {image && <Image outputImage={outputImage} image={image} />}
-      </div>
+      {image && (
+        <div className={bem(block, 'image')}>
+          <Image outputImage={outputImage} image={image} />
+        </div>
+      )}
       {/* Content */}
       <div className={bem(block, 'content')}>
         {/* Heading */}
         {heading && (
-          <Heading
-            level="2"
-            children={heading}
-            block={block}
-            element="heading"
-          />
+          <Heading level="2" block={block} element="heading">
+            {heading}
+          </Heading>
         )}
         {/* Subheading */}
         {subheading && (
-          <Heading
-            level="3"
-            children={subheading}
-            block={block}
-            element="subheading"
-          />
+          <Heading level="3" block={block} element="subheading">
+            {subheading}
+          </Heading>
         )}
         {/* Body */}
-        {body && <Paragraph children={body} block={block} element="body" />}
+        {body && (
+          <Paragraph block={block} element="body">
+            {children}
+          </Paragraph>
+        )}
         {/* Button */}
-        {buttonText && (
-          <Button children={buttonText} block={block} element="button" />
+        {linkUrl && (
+          <Link url={linkUrl} block={block} element="link">
+            {linkText}
+          </Link>
         )}
       </div>
     </div>
@@ -59,8 +62,9 @@ Card.propTypes = {
   image: imageTypeProps,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  body: PropTypes.string,
-  buttonText: PropTypes.string,
+  body: PropTypes.children,
+  linkText: PropTypes.string,
+  linkUrl: PropTypes.string,
 };
 
 export default Card;

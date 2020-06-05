@@ -14,26 +14,28 @@ export const card = () => (
     outputImage={true}
     image={{
       alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/400/300.jpg',
+      src: 'https://picsum.photos/1280/720.jpg',
     }}
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
     body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-    buttonText="Read more about this card"
+    linkText="Read more about this card"
+    linkUrl="#"
   />
 );
-export const cardBg = () => (
+export const cardWithBackground = () => (
   <Card
     cardModifiers={['bg']}
     outputImage={true}
     image={{
       alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/400/300.jpg',
+      src: 'https://picsum.photos/1280/720.jpg',
     }}
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
     body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-    buttonText="Read more about this card"
+    linkText="Read more about this card"
+    linkUrl="#"
   />
 );
 export const newsCard = () => (
