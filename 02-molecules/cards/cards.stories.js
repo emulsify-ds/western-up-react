@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Card from './Card/Card.component';
-// import NewsCard from './news/NewsCard.component';
 
 /**
  * Storybook Definition.
@@ -14,7 +13,7 @@ export const card = () => (
     outputImage={true}
     image={{
       alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/400/300.jpg',
+      src: 'https://picsum.photos/1280/720.jpg',
     }}
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
@@ -23,13 +22,13 @@ export const card = () => (
     linkUrl="#"
   />
 );
-export const cardBg = () => (
+export const cardWithBackground = () => (
   <Card
     cardModifiers={['bg']}
     outputImage={true}
     image={{
       alt: 'Random Image from Picsum',
-      src: 'https://picsum.photos/400/300.jpg',
+      src: 'https://picsum.photos/1280/720.jpg',
     }}
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
@@ -38,13 +37,3 @@ export const cardBg = () => (
     linkUrl="#"
   />
 );
-// export const newsCard = () => (
-//   <NewsCard
-//     image_src="https://picsum.photos/1280/720"
-//     heading="This is the card heading"
-//     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
-//     body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-//     link_text="Read more about this card"
-//     date="2119-12-09 12:00:00"
-//   />
-// );

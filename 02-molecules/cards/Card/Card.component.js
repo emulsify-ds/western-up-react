@@ -12,7 +12,7 @@ const Card = ({
   image,
   heading,
   subheading,
-  body,
+  children,
   linkText,
   linkUrl,
   cardModifiers,
@@ -43,7 +43,7 @@ const Card = ({
         {/* Body */}
         {body && (
           <Paragraph block={block} element="body">
-            {body}
+            {children}
           </Paragraph>
         )}
         {/* Button */}
@@ -62,7 +62,7 @@ Card.propTypes = {
   image: imageTypeProps,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  body: PropTypes.string,
+  body: PropTypes.children,
   linkText: PropTypes.string,
   linkUrl: PropTypes.string,
 };
