@@ -20,34 +20,36 @@ const Card = ({
   return (
     <div className={bem(block, '', cardModifiers)}>
       {/* Image */}
-      <div className={bem(block, 'image')}>
-        {image && <Image outputImage={outputImage} image={image} />}
-      </div>
+      {image && (
+        <div className={bem(block, 'image')}>
+          <Image outputImage={outputImage} image={image} />
+        </div>
+      )}
       {/* Content */}
       <div className={bem(block, 'content')}>
         {/* Heading */}
         {heading && (
-          <Heading
-            level="2"
-            children={heading}
-            block={block}
-            element="heading"
-          />
+          <Heading level="2" block={block} element="heading">
+            {heading}
+          </Heading>
         )}
         {/* Subheading */}
         {subheading && (
-          <Heading
-            level="3"
-            children={subheading}
-            block={block}
-            element="subheading"
-          />
+          <Heading level="3" block={block} element="subheading">
+            {subheading}
+          </Heading>
         )}
         {/* Body */}
-        {body && <Paragraph children={body} block={block} element="body" />}
+        {body && (
+          <Paragraph block={block} element="body">
+            {body}
+          </Paragraph>
+        )}
         {/* Button */}
         {buttonText && (
-          <Button children={buttonText} block={block} element="button" />
+          <Button block={block} element="button">
+            {buttonText}
+          </Button>
         )}
       </div>
     </div>
