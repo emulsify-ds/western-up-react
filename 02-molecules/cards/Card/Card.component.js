@@ -5,7 +5,7 @@ import { imageTypeProps } from '../../../01-atoms/images/Image/Image.component';
 import bem from '../../../_utils/bem';
 import Heading from '../../../01-atoms/text/Heading.component';
 import Paragraph from '../../../01-atoms/text/Paragraph.component';
-import Button from '../../../01-atoms/buttons/Button.component';
+import Link from '../../../01-atoms/links/Link.component';
 
 const Card = ({
   outputImage,
@@ -13,7 +13,8 @@ const Card = ({
   heading,
   subheading,
   body,
-  buttonText,
+  linkText,
+  linkUrl,
   cardModifiers,
 }) => {
   const block = 'card';
@@ -46,10 +47,10 @@ const Card = ({
           </Paragraph>
         )}
         {/* Button */}
-        {buttonText && (
-          <Button block={block} element="button">
-            {buttonText}
-          </Button>
+        {linkUrl && (
+          <Link url={linkUrl} block={block} element="link">
+            {linkText}
+          </Link>
         )}
       </div>
     </div>
@@ -62,7 +63,8 @@ Card.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   body: PropTypes.string,
-  buttonText: PropTypes.string,
+  linkText: PropTypes.string,
+  linkUrl: PropTypes.string,
 };
 
 export default Card;

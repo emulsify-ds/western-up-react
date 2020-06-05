@@ -19,7 +19,8 @@ export const card = () => (
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
     body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-    buttonText="Read more about this card"
+    linkText="Read more about this card"
+    linkUrl="#"
   />
 );
 export const cardBg = () => (
@@ -33,7 +34,8 @@ export const cardBg = () => (
     heading="This is the card heading"
     subheading="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus"
     body="Ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-    buttonText="Read more about this card"
+    linkText="Read more about this card"
+    linkUrl="#"
   />
 );
 // export const newsCard = () => (
