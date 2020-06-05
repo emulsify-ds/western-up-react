@@ -16,6 +16,7 @@ export const Hero = () => (
       src: 'https://picsum.photos/400/300.jpg',
     }}
     heading="This is the hero heading"
-    content="This is some super awesome hero content"
-  />
+  >
+    This is some super awesome hero content
+  </HeroComponent>
 );
