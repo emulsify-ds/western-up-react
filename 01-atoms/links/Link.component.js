@@ -1,14 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withModifiers from '../../_utils/withModifiers';
+import bem from '../../_utils/bem';
 
-const Link = ({ children, modifiers, url, target, title }) => {
+const Link = ({
+  children,
+  block = 'link',
+  element,
+  modifiers,
+  url,
+  target,
+  title,
+}) => {
   return (
     <a
       href={url}
       target={target}
       title={title}
-      className={withModifiers('link')(modifiers)}
+      className={bem(block, element, modifiers)}
     >
       {children}
     </a>

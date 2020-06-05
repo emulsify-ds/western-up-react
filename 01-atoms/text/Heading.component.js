@@ -2,9 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import bem from '../../_utils/bem';
 
-const Heading = ({ block = 'heading', children, modifiers, level = '1' }) => {
+const Heading = ({
+  block = 'heading',
+  element = '',
+  children,
+  modifiers,
+  level = '1',
+}) => {
   const Tag = `h${level}`;
-  return <Tag className={bem(block, '', modifiers)}>{children}</Tag>;
+  return <Tag className={bem(block, element, modifiers)}>{children}</Tag>;
 };
 
 Heading.propTypes = {

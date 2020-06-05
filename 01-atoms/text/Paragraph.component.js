@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withModifiers from '../../_utils/withModifiers';
+import bem from '../../_utils/bem';
 
-const Paragraph = ({ children, modifiers }) => {
-  return <p className={withModifiers('paragraph')(modifiers)}>{children}</p>;
+const Paragraph = ({ children, block = 'paragraph', element, modifiers }) => {
+  return <p className={bem(block, element, modifiers)}>{children}</p>;
 };
 
 Paragraph.propTypes = {

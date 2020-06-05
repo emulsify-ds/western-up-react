@@ -5,16 +5,22 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import withModifiers from '../../_utils/withModifiers';
+import bem from '../../_utils/bem';
 
 /**
  * Component that renders a button with a click handler.
  */
-const Button = ({ onClick, children, modifiers }) => {
+const Button = ({
+  onClick,
+  children,
+  block = 'button',
+  element,
+  modifiers,
+}) => {
   return (
     <button
       type="button"
-      className={withModifiers('button')(modifiers)}
+      className={bem(block, element, modifiers)}
       aria-label="button"
       onClick={onClick}
     >
