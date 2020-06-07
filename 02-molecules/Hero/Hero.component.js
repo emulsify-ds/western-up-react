@@ -9,13 +9,13 @@ import Paragraph from '../../01-atoms/text/Paragraph.component';
 const Hero = ({ block = 'hero', outputImage, image, heading, children }) => {
   return (
     <BackgroundImage block={block} outputImage={outputImage} image={image}>
-      <div className={bem(block, 'content')}>
-        <div className={bem(block, 'content-inner')}>
+      <div className={bem(block, 'content-inner')}>
+        {heading && (
           <Heading level="1" block={block} element="heading">
             {heading}
           </Heading>
-          <Paragraph>{children}</Paragraph>
-        </div>
+        )}
+        {children && <Paragraph>{children}</Paragraph>}
       </div>
     </BackgroundImage>
   );
@@ -24,8 +24,9 @@ const Hero = ({ block = 'hero', outputImage, image, heading, children }) => {
 Hero.propTypes = {
   block: PropTypes.string,
   outputImage: PropTypes.bool,
-  image: imageTypeProps,
+  image: imageTypeProps.isRequired,
   heading: PropTypes.string,
+  children: PropTypes.element,
 };
 
 export default Hero;
