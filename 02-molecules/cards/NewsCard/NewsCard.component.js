@@ -5,7 +5,7 @@ import { imageTypeProps } from '../../../01-atoms/images/Image/Image.component';
 import bem from '../../../_utils/bem';
 import Heading from '../../../01-atoms/text/Heading.component';
 import Paragraph from '../../../01-atoms/text/Paragraph.component';
-import Button from '../../../01-atoms/buttons/Button.component';
+import Link from '../../../01-atoms/links/Link.component';
 
 const NewsCard = ({
   outputImage,
@@ -13,7 +13,8 @@ const NewsCard = ({
   heading,
   subheading,
   body,
-  buttonText,
+  linkText,
+  linkUrl,
   date,
   tag,
 }) => {
@@ -32,28 +33,28 @@ const NewsCard = ({
         <div className={bem(block, 'content-top')}>
           {/* Heading */}
           {heading && (
-            <Heading
-              level="2"
-              children={heading}
-              block={block}
-              element="heading"
-            />
+            <Heading level="2" block={block} element="heading">
+              {heading}
+            </Heading>
           )}
           {/* Subheading */}
           {subheading && (
-            <Heading
-              level="3"
-              children={subheading}
-              block={block}
-              element="subheading"
-            />
+            <Heading level="3" block={block} element="subheading">
+              {subheading}
+            </Heading>
           )}
         </div>
         {/* Body */}
-        {body && <Paragraph children={body} block={block} element="body" />}
+        {body && (
+          <Paragraph block={block} element="body">
+            {body}
+          </Paragraph>
+        )}
         {/* Button */}
-        {buttonText && (
-          <Button children={buttonText} block={block} element="button" />
+        {linkUrl && (
+          <Link url={linkUrl} block={block} element="link">
+            {linkText}
+          </Link>
         )}
       </div>
       <div className={bem(block, 'meta')}>
@@ -68,7 +69,11 @@ const NewsCard = ({
             <span className={bem(block, 'month')}>{month}</span>
           </div>
           {/* Tag */}
-          {tag && <Paragraph children={tag} block={block} element="tag" />}
+          {tag && (
+            <Paragraph block={block} element="tag">
+              {tag}
+            </Paragraph>
+          )}
         </div>
       </div>
     </div>
