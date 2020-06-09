@@ -9,7 +9,7 @@ const ResponsiveImage = ({ outputImage, modifiers, sources = [], image }) => (
       <Image
         modifiers={modifiers}
         src={image.src}
-        srcSet={image.srcset}
+        srcset={image.srcset}
         sizes={image.sizes}
         alt={image.alt}
         title={image.title}
@@ -21,7 +21,7 @@ const ResponsiveImage = ({ outputImage, modifiers, sources = [], image }) => (
         ))}
         <Image
           src={image.src}
-          srcSet={image.srcset}
+          srcset={image.srcset}
           sizes={image.sizes}
           alt={image.alt}
           title={image.title}
