@@ -2,6 +2,7 @@ import React from 'react';
 
 import Grid from './Grid.component';
 import Card from '../../02-molecules/cards/Card/Card.component';
+import Cta from '../../02-molecules/cta/Cta.component';
 
 /**
  * Storybook Definition.
@@ -68,5 +69,25 @@ export const CardGrid = () => (
       lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada
       feugiat.
     </Card>
+  </Grid>
+);
+
+export const CtaGrid = () => (
+  <Grid gridLabel="CTA Grid">
+    <Cta
+      additionalClasses={['grid__item']}
+      heading="This is an awesome CTA"
+      buttonText="Click me!"
+    />
+    <Cta
+      additionalClasses={['grid__item']}
+      heading="This is an even better CTA!!"
+      buttonText="No, click me!"
+    />
+    <Cta
+      additionalClasses={['grid__item']}
+      heading="This is a boring CTA"
+      buttonText="Click me, I guess..."
+    />
   </Grid>
 );
