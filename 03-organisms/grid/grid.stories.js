@@ -3,6 +3,7 @@ import React from 'react';
 import Grid from './Grid.component';
 import Card from '../../02-molecules/cards/Card/Card.component';
 import Cta from '../../02-molecules/cta/Cta.component';
+import NewsCard from '../../02-molecules/cards/NewsCard/NewsCard.component';
 
 /**
  * Storybook Definition.
@@ -88,6 +89,53 @@ export const CtaGrid = () => (
       additionalClasses={['grid__item']}
       heading="This is a boring CTA"
       buttonText="Click me, I guess..."
+    />
+  </Grid>
+);
+
+export const NewsCardGrid = () => (
+  <Grid gridLabel="News Card Grid">
+    <NewsCard
+      additionalClasses={['grid__item']}
+      image={{
+        alt: 'Random Image from Picsum',
+        src: 'https://picsum.photos/1280/720',
+      }}
+      heading="Here's the super awesome heading!"
+      subheading="The student center"
+      body="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+      linkText="Click Me!"
+      linkUrl="#"
+      date="2119-12-09T12:00:00"
+      tag="Photos"
+    />
+    <NewsCard
+      additionalClasses={['grid__item']}
+      image={{
+        alt: 'Random Image from Picsum',
+        src: 'https://picsum.photos/1280/720',
+      }}
+      heading="This news will be incredible"
+      subheading="The student center"
+      body="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+      linkText="Click Me!"
+      linkUrl="#"
+      date="2119-12-10T12:00:00"
+      tag="Photos"
+    />
+    <NewsCard
+      additionalClasses={['grid__item']}
+      image={{
+        alt: 'Random Image from Picsum',
+        src: 'https://picsum.photos/1280/720',
+      }}
+      heading="Here's the super awesome heading!"
+      subheading="The student center"
+      body="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+      linkText="Click Me!"
+      linkUrl="#"
+      date="2120-01-23T12:00:00"
+      tag="Photos"
     />
   </Grid>
 );
