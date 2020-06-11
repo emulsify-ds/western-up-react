@@ -14,10 +14,12 @@ const Cta = ({
   buttonText,
 }) => (
   <div className={bem(block, element, modifiers, additionalClasses)}>
-    <Heading level="2" baseClass="cta__heading">
+    <Heading level="2" block={block} element="heading">
       {heading}
     </Heading>
-    <Button modifiers={buttonModifiers}>{buttonText}</Button>
+    <Button block={block} element="button">
+      {buttonText}
+    </Button>
   </div>
 );
 
