@@ -10,18 +10,17 @@ import Placeholder from '../Placeholder/Placeholder.component';
 export default { title: 'Template/Layout' };
 
 export const fullwidth = () => (
-  <Layout
-    menu={menu}
-    footerItems={footerItems}
-    content={<Placeholder placeholder="Primary Content" />}
-  />
+  <Layout menu={menu} footerItems={footerItems}>
+    <Placeholder placeholder="Primary Content" />
+  </Layout>
 );
 export const withSidebar = () => (
   <Layout
     menu={menu}
     footerItems={footerItems}
     hasSidebar={1}
-    content={<Placeholder placeholder="Primary Content" />}
     sidebar={<Placeholder placeholder="Secondary Content" />}
-  />
+  >
+    <Placeholder placeholder="Primary Content" />
+  </Layout>
 );
