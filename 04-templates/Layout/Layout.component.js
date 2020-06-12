@@ -60,6 +60,9 @@ Layout.propTypes = {
   title: PropTypes.element,
   footerItems: arrayOf(PropTypes.shape(menuItemPropType)),
   hasSidebar: PropTypes.bool,
+  hero: PropTypes.element,
+  sidebar: PropTypes.element,
+  children: PropTypes.element,
 };
 
 export default Layout;
