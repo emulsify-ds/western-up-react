@@ -84,6 +84,10 @@ const NewsCard = ({
 };
 
 NewsCard.propTypes = {
+  block: PropTypes.string,
+  element: PropTypes.string,
+  modifiers: PropTypes.arrayOf(PropTypes.string),
+  additionalClasses: PropTypes.arrayOf(PropTypes.string),
   outputImage: PropTypes.bool,
   image: imageTypeProps,
   heading: PropTypes.string,
@@ -92,6 +96,8 @@ NewsCard.propTypes = {
   buttonText: PropTypes.string,
   date: PropTypes.instanceOf(Date),
   tag: PropTypes.string,
+  linkText: PropTypes.string,
+  linkUrl: PropTypes.string,
 };
 
 export default NewsCard;
