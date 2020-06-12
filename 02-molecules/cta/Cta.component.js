@@ -17,14 +17,17 @@ const Cta = ({
     <Heading level="2" block={block} element="heading">
       {heading}
     </Heading>
-    <Button block={block} element="button">
+    <Button block={block} element="button" modifiers={buttonModifiers}>
       {buttonText}
     </Button>
   </div>
 );
 
 Cta.propTypes = {
-  ctaModifiers: PropTypes.arrayOf(PropTypes.string),
+  block: PropTypes.string,
+  element: PropTypes.string,
+  modifiers: PropTypes.arrayOf(PropTypes.string),
+  additionalClasses: PropTypes.arrayOf(PropTypes.string),
   heading: PropTypes.string.isRequired,
   buttonModifiers: PropTypes.arrayOf(PropTypes.string),
   buttonText: PropTypes.string.isRequired,
