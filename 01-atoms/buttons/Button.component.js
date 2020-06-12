@@ -32,6 +32,8 @@ const Button = ({
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
+  block: PropTypes.string,
+  element: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
 };
 
