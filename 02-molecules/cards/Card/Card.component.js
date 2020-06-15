@@ -15,11 +15,13 @@ const Card = ({
   children,
   linkText,
   linkUrl,
-  cardModifiers,
+  block = 'card',
+  element,
+  modifiers,
+  additionalClasses,
 }) => {
-  const block = 'card';
   return (
-    <div className={bem(block, '', cardModifiers)}>
+    <div className={bem(block, element, modifiers, additionalClasses)}>
       {/* Image */}
       {image && (
         <div className={bem(block, 'image')}>

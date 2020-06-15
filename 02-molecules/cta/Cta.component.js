@@ -2,10 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from '../../01-atoms/text/Heading.component';
 import Button from '../../01-atoms/buttons/Button.component';
-import withModifiers from '../../_utils/withModifiers';
+import bem from '../../_utils/bem';
 
-const Cta = ({ ctaModifiers, heading, buttonModifiers, buttonText }) => (
-  <div className={withModifiers('cta')(ctaModifiers)}>
+const Cta = ({
+  block = 'cta',
+  element,
+  modifiers,
+  additionalClasses,
+  heading,
+  buttonModifiers,
+  buttonText,
+}) => (
+  <div className={bem(block, element, modifiers, additionalClasses)}>
     <Heading level="2" baseClass="cta__heading">
       {heading}
     </Heading>

@@ -17,8 +17,11 @@ const NewsCard = ({
   linkUrl,
   date,
   tag,
+  block = 'news-card',
+  element,
+  modifiers,
+  additionalClasses,
 }) => {
-  const block = 'news-card';
   const dateParsed = new Date(date);
   const day = new Intl.DateTimeFormat('en-US', {
     day: '2-digit',
@@ -27,7 +30,7 @@ const NewsCard = ({
     month: 'short',
   }).format(dateParsed);
   return (
-    <div className={bem(block)}>
+    <div className={bem(block, element, modifiers, additionalClasses)}>
       {/* Content */}
       <div className={bem(block, 'content')}>
         <div className={bem(block, 'content-top')}>
