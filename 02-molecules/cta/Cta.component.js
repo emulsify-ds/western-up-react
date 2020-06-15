@@ -14,15 +14,20 @@ const Cta = ({
   buttonText,
 }) => (
   <div className={bem(block, element, modifiers, additionalClasses)}>
-    <Heading level="2" baseClass="cta__heading">
+    <Heading level="2" block={block} element="heading">
       {heading}
     </Heading>
-    <Button modifiers={buttonModifiers}>{buttonText}</Button>
+    <Button block={block} element="button" modifiers={buttonModifiers}>
+      {buttonText}
+    </Button>
   </div>
 );
 
 Cta.propTypes = {
-  ctaModifiers: PropTypes.arrayOf(PropTypes.string),
+  block: PropTypes.string,
+  element: PropTypes.string,
+  modifiers: PropTypes.arrayOf(PropTypes.string),
+  additionalClasses: PropTypes.arrayOf(PropTypes.string),
   heading: PropTypes.string.isRequired,
   buttonModifiers: PropTypes.arrayOf(PropTypes.string),
   buttonText: PropTypes.string.isRequired,

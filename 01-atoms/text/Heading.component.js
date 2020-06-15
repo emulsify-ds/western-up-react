@@ -5,8 +5,8 @@ import bem from '../../_utils/bem';
 const Heading = ({
   block = 'heading',
   element = '',
-  children,
   modifiers,
+  children,
   level = '1',
 }) => {
   const Tag = `h${level}`;
@@ -15,6 +15,7 @@ const Heading = ({
 
 Heading.propTypes = {
   block: PropTypes.string,
+  element: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.element,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),

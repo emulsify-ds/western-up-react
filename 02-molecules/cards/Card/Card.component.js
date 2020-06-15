@@ -64,9 +64,13 @@ Card.propTypes = {
   image: imageTypeProps,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  body: PropTypes.children,
+  children: PropTypes.element,
   linkText: PropTypes.string,
   linkUrl: PropTypes.string,
+  block: PropTypes.string,
+  element: PropTypes.string,
+  modifiers: PropTypes.arrayOf(PropTypes.string),
+  additionalClasses: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Card;
