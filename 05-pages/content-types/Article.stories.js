@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../04-templates/Layout/Layout.component';
 import { items as menu } from '../../02-molecules/menus/MainMenu/MainMenu.data.json';
 import { items as footerItems } from '../../02-molecules/menus/InlineMenu/InlineMenu.data.json';
+import { items as breadcrumbs } from '../../02-molecules/menus/Breadcrumbs/Breadcrumbs.data.json';
 
 import Heading from '../../01-atoms/text/Heading.component';
 import Hr from '../../01-atoms/hr/Hr.component';
@@ -20,6 +21,7 @@ export default { title: 'Pages/Content Types' };
 export const Article = () => (
   <Layout
     menu={menu}
+    breadcrumbs={breadcrumbs}
     title="Assessment record repeat whiteboard, define reaction Moodle."
     footerItems={footerItems}
     hasSidebar={1}
