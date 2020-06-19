@@ -8,9 +8,9 @@ const Grid = ({
   children,
   block = 'grid',
   element,
+  modifiers = [],
   gridType,
   pageLayoutModifier = 'contained',
-  modifiers = [],
 }) => {
   const mods = []
     .concat(modifiers, gridType, pageLayoutModifier)
@@ -24,11 +24,13 @@ const Grid = ({
 };
 
 Grid.propTypes = {
+  gridLabel: PropTypes.string,
+  children: PropTypes.element,
   block: PropTypes.string.isRequired,
   element: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
-  gridLabel: PropTypes.string,
-  children: PropTypes.element,
+  gridType: PropTypes.string,
+  pageLayoutModifier: PropTypes.string,
 };
 
 export default Grid;
