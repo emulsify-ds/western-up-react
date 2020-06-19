@@ -61,7 +61,6 @@ export const Article = () => (
     <Paragraph>
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
     </Paragraph>
-    <Hr />
     <Grid gridLabel="Development label repeat mints select pedagogy whiteboard click next asynchronous learning record instructional design" gridType="card">
       <Card
         additionalClasses={['grid__item']}
@@ -70,12 +69,12 @@ export const Article = () => (
           alt: 'People',
           src: 'https://picsum.photos/id/987/480/300',
         }}
-        heading="Meet and Greet with the Chancellor"
-        subheading="Mark Namerson Visits the Students"
+        heading="Assessment ipsum laboris incididunt list in consequat"
+        subheading="Person of Interest"
         linkText="Continue Reading"
         linkUrl="#"
       >
-        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.
+        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh.
       </Card>
       <Card
         additionalClasses={['grid__item']}
@@ -84,8 +83,8 @@ export const Article = () => (
           alt: 'Nature',
           src: 'https://picsum.photos/id/678/480/300',
         }}
-        heading="Hike the Hills and Valleys of PA"
-        subheading="Visiting Our National Parks"
+        heading="Aliqua irure training, ullamco deserunt ad"
+        subheading=" Some pretty sweet nature"
       >
         Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo.
       </Card>
@@ -96,17 +95,15 @@ export const Article = () => (
           alt: 'Animals',
           src: 'https://picsum.photos/id/654/480/300',
         }}
-        heading="Going Ape for the Environmental Job Fair"
-        subheading="Pittsburgh Zoo Hosts Environmental Job Fair in August"
+        heading="SCORM anim assessment mints commodo"
+        subheading="Awesome animals"
       >
-        Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat."
+        Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.
       </Card>
     </Grid>
-    <Hr />
     <Cta
-      modifiers={['home']}
-      heading="World Class Library System"
-      buttonText="Visit in Virtual Reality"
+      heading="See What Campus Has For You"
+      buttonText="Request a Campus Visit"
     />
   </Layout>
 );
