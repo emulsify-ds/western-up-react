@@ -74,8 +74,9 @@ export const Article = () => (
         subheading="Mark Namerson Visits the Students"
         linkText="Continue Reading"
         linkUrl="#"
-        children="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat."
-      />
+      >
+        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.
+      </Card>
       <Card
         additionalClasses={['grid__item']}
         outputImage={true}
@@ -85,8 +86,9 @@ export const Article = () => (
         }}
         heading="Hike the Hills and Valleys of PA"
         subheading="Visiting Our National Parks"
-        children="Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo."
-      />
+      >
+        Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo.
+      </Card>
       <Card
         additionalClasses={['grid__item']}
         outputImage={true}
@@ -96,8 +98,9 @@ export const Article = () => (
         }}
         heading="Going Ape for the Environmental Job Fair"
         subheading="Pittsburgh Zoo Hosts Environmental Job Fair in August"
-        children="Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat."
-      />
+      >
+        Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat."
+      </Card>
     </Grid>
     <Hr />
     <Cta
