@@ -14,7 +14,7 @@ import Cta from '../../02-molecules/cta/Cta.component';
 /**
  * Storybook Definition.
  */
-export default { title: 'Pages/Landing Pages/Home' };
+export default { title: 'Pages/Landing Pages' };
 
 export const Home = () => (
   <Layout
