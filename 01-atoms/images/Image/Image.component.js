@@ -5,7 +5,7 @@ import withModifiers from '../../../_utils/withModifiers';
 const Image = ({ modifiers, src, srcset, sizes, alt, title }) => {
   return (
     <img
-      className={withModifiers('img')(modifiers)}
+      className={withModifiers('image')(modifiers)}
       src={src}
       srcSet={srcset}
       sizes={sizes}
