@@ -1,6 +1,6 @@
 {
   "name": "western-up-react",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "React components for a fictitious University install",
   "dependencies": {
     "cross-env": "5.0.5",
