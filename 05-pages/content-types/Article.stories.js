@@ -34,13 +34,13 @@ export const Article = () => (
         <Heading level={3}>Upcoming Events</Heading>
         <UnorderedList
           items={[
-            { content: 'This is the first item in the unordered list.' },
-            {
-              label: 'This is the optional label',
-              content: 'And here is the item that goes with the label.',
+            { content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
             },
-            { content: "Here's the third item." },
-            { content: "And here's the last item." },
+            {
+              content: "Aliquam tincidunt mauris eu risus.",
+            },
+            { content: "Vestibulum auctor dapibus neque."},
+            { content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit." },
           ]}
         />
       </>
