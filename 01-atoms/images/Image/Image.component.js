@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withModifiers from '../../../_utils/withModifiers';
 
-const Image = ({ modifiers, src, srcset, sizes, alt, title }) => {
+const Image = ({ modifiers, src, srcset, sizes, alt, title, children }) => {
   return (
-    <img
-      className={withModifiers('image')(modifiers)}
-      src={src}
-      srcSet={srcset}
-      sizes={sizes}
-      alt={alt}
-      title={title}
-    />
+    <>
+      <img
+        className={withModifiers('image')(modifiers)}
+        src={src}
+        srcSet={srcset}
+        sizes={sizes}
+        alt={alt}
+        title={title}
+      />
+      {children}
+    </>
   );
 };
 
