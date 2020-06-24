@@ -26,7 +26,7 @@ const Logo = ({ block, element = 'icon', modifiers = [] }) => (
   </svg>
 );
 
-Logo.prototype = {
+Logo.propTypes = {
   block: PropTypes.string,
   element: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
